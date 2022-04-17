@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="icon.svg" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chris game</title>
+  </head>
+  <style>
+    * {
+      zoom: 1.1;
+      box-sizing: border-box;
+      outline: none;
+      user-select: none; /* Standard */
+    }
+    *::selection {
+      color: #fff;
+      background: #000;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    body {
+      margin: 0;
+      font-family: Roboto Mono;
+    }
+    h1 {
+      text-align: center;
+      font-family: Roboto Mono;
+    }
+    .bar {
+      font-family: Fredoka One;
+      color: #fff;
+      background-color: #000;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      padding: 14px;
+    }
+    center {
+      padding: 58px 10px 10px 30px;
+    }
+
+    button {
+      display: none;
+      padding: 0;
+      font-size: 30px;
+      width: 180px;
+      border: 2px solid #000;
+      border-radius: 11px;
+      margin-bottom: 11px;
+      transition: all 0.1s ease;
+      transform: translate(-2px, -2px);
+      box-shadow: #000 2px 2px;
+      background-color: #fff;
+      color: #000;
+    }
+    button:active {
+      transform: translate(0px, 0px);
+      box-shadow: #000 0px 0px;
+    }
+  </style>
+  <script>
+    function show(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    score = 0;
+    scoreinc1 = 1;
+    scoreinc2 = 1;
+    scoreinc3 = 1;
+    scoreinc4 = 1;
+    scoreinc5 = 1;
+    scoreinc6 = 1;
+    scoreinc7 = 1;
+    scoreinc8 = 1;
+    scoreinc9 = 1;
+    scoreinc10 = 1;
+    scoreinc11 = 1;
+    scoreinc12 = 1;
+    scoreinc13 = 1;
+    scoreinc14 = 1;
+    scoreinc15 = 1;
+    scoreinc16 = 1;
+    scoreinc17 = 1;
+    scoreinc18 = 1;
+    scoreinc19 = 1;
+    scoreinc20 = 1;
+    scoreinc21 = 1;
+    scoreinc22 = 1;
+    scoreinc23 = 1;
+    scoreinc24 = 1;
+    scoreinc25 = 1;
+    scoreinc26 = 1;
+    scoreinc27 = 1;
+    scoreinc28 = 1;
+    scoreinc29 = 1;
+    scoreinc30 = 1;
+    scoreinc31 = 1;
+    scoreinc32 = 1;
+    scoreinc33 = 1;
+    scoreinc34 = 1;
+    scoreinc35 = 1;
+    scoreinc36 = 1;
+    scoreinc37 = 1;
+    scoreinc38 = 1;
+    scoreinc39 = 1;
+    scoreinc40 = 1;
+    scoreinc41 = 1;
+    scoreinc42 = 1;
+    scoreinc43 = 1;
+    scoreinc44 = 1;
+    scoreinc45 = 1;
+    scoreinc46 = 1;
+    scoreinc47 = 1;
+    scoreinc48 = 1;
+    scoreinc49 = 1;
+    scoreinc50 = 1;
+    scoreinc51 = 1;
+    scoreinc52 = 1;
+    scoreinc53 = 1;
+    scoreinc54 = 1;
+    scoreinc55 = 1;
+    scoreinc56 = 1;
+    scoreinc57 = 1;
+    scoreinc58 = 1;
+    scoreinc59 = 1;
+    scoreinc60 = 1;
+    scoreinc61 = 1;
+    scoreinc62 = 1;
+    scoreinc63 = 1;
+    scoreinc64 = 1;
+    scoreinc65 = 1;
+    scoreinc66 = 1;
+    scoreinc67 = 1;
+    scoreinc68 = 1;
+    scoreinc69 = 1;
+    scoreinc70 = 1;
+    scoreinc71 = 1;
+    scoreinc72 = 1;
+    scoreinc73 = 1;
+    scoreinc74 = 1;
+    scoreinc75 = 1;
+    scoreinc76 = 1;
+    scoreinc77 = 1;
+    scoreinc78 = 1;
+    scoreinc79 = 1;
+    scoreinc80 = 1;
+    scoreinc81 = 1;
+    scoreinc82 = 1;
+    scoreinc83 = 1;
+    scoreinc84 = 1;
+    scoreinc85 = 1;
+    scoreinc86 = 1;
+    scoreinc87 = 1;
+    scoreinc88 = 1;
+    scoreinc89 = 1;
+    scoreinc90 = 1;
+    scoreinc91 = 1;
+    scoreinc92 = 1;
+    scoreinc93 = 1;
+    scoreinc94 = 1;
+    scoreinc95 = 1;
+    scoreinc96 = 1;
+    scoreinc97 = 1;
+    scoreinc98 = 1;
+    scoreinc99 = 1;
+    setInterval(onTimerTick, 66);
+    function onTimerTick() {
+      document.getElementById("points").innerHTML = String(score);
+      show("0");
+      if (score >= 10 ** 1) {
+        show("1");
+      }
+      if (score >= 10 ** 2) {
+        show("2");
+      }
+      if (score >= 10 ** 3) {
+        show("3");
+      }
+      if (score >= 10 ** 4) {
+        show("4");
+      }
+      if (score >= 10 ** 5) {
+        show("5");
+      }
+      if (score >= 10 ** 6) {
+        show("6");
+      }
+      if (score >= 10 ** 7) {
+        show("7");
+      }
+      if (score >= 10 ** 8) {
+        show("8");
+      }
+      if (score >= 10 ** 9) {
+        show("9");
+      }
+      if (score >= 10 ** 10) {
+        show("10");
+      }
+      if (score >= 10 ** 11) {
+        show("11");
+      }
+      if (score >= 10 ** 12) {
+        show("12");
+      }
+      if (score >= 10 ** 13) {
+        show("13");
+      }
+      if (score >= 10 ** 14) {
+        show("14");
+      }
+      if (score >= 10 ** 15) {
+        show("15");
+      }
+      if (score >= 10 ** 16) {
+        show("16");
+      }
+      if (score >= 10 ** 17) {
+        show("17");
+      }
+      if (score >= 10 ** 18) {
+        show("18");
+      }
+      if (score >= 10 ** 19) {
+        show("19");
+      }
+      if (score >= 10 ** 20) {
+        show("20");
+      }
+      if (score >= 10 ** 21) {
+        show("21");
+      }
+      if (score >= 10 ** 22) {
+        show("22");
+      }
+      if (score >= 10 ** 23) {
+        show("23");
+      }
+      if (score >= 10 ** 24) {
+        show("24");
+      }
+      if (score >= 10 ** 25) {
+        show("25");
+      }
+      if (score >= 10 ** 26) {
+        show("26");
+      }
+      if (score >= 10 ** 27) {
+        show("27");
+      }
+      if (score >= 10 ** 28) {
+        show("28");
+      }
+      if (score >= 10 ** 29) {
+        show("29");
+      }
+      if (score >= 10 ** 30) {
+        show("30");
+      }
+      if (score >= 10 ** 31) {
+        show("31");
+      }
+      if (score >= 10 ** 32) {
+        show("32");
+      }
+      if (score >= 10 ** 33) {
+        show("33");
+      }
+      if (score >= 10 ** 34) {
+        show("34");
+      }
+      if (score >= 10 ** 35) {
+        show("35");
+      }
+      if (score >= 10 ** 36) {
+        show("36");
+      }
+      if (score >= 10 ** 37) {
+        show("37");
+      }
+      if (score >= 10 ** 38) {
+        show("38");
+      }
+      if (score >= 10 ** 39) {
+        show("39");
+      }
+      if (score >= 10 ** 40) {
+        show("40");
+      }
+      if (score >= 10 ** 41) {
+        show("41");
+      }
+      if (score >= 10 ** 42) {
+        show("42");
+      }
+      if (score >= 10 ** 43) {
+        show("43");
+      }
+      if (score >= 10 ** 44) {
+        show("44");
+      }
+      if (score >= 10 ** 45) {
+        show("45");
+      }
+      if (score >= 10 ** 46) {
+        show("46");
+      }
+      if (score >= 10 ** 47) {
+        show("47");
+      }
+      if (score >= 10 ** 48) {
+        show("48");
+      }
+      if (score >= 10 ** 49) {
+        show("49");
+      }
+      if (score >= 10 ** 50) {
+        show("50");
+      }
+      if (score >= 10 ** 51) {
+        show("51");
+      }
+      if (score >= 10 ** 52) {
+        show("52");
+      }
+      if (score >= 10 ** 53) {
+        show("53");
+      }
+      if (score >= 10 ** 54) {
+        show("54");
+      }
+      if (score >= 10 ** 55) {
+        show("55");
+      }
+      if (score >= 10 ** 56) {
+        show("56");
+      }
+      if (score >= 10 ** 57) {
+        show("57");
+      }
+      if (score >= 10 ** 58) {
+        show("58");
+      }
+      if (score >= 10 ** 59) {
+        show("59");
+      }
+      if (score >= 10 ** 60) {
+        show("60");
+      }
+      if (score >= 10 ** 61) {
+        show("61");
+      }
+      if (score >= 10 ** 62) {
+        show("62");
+      }
+      if (score >= 10 ** 63) {
+        show("63");
+      }
+      if (score >= 10 ** 64) {
+        show("64");
+      }
+      if (score >= 10 ** 65) {
+        show("65");
+      }
+      if (score >= 10 ** 66) {
+        show("66");
+      }
+      if (score >= 10 ** 67) {
+        show("67");
+      }
+      if (score >= 10 ** 68) {
+        show("68");
+      }
+      if (score >= 10 ** 69) {
+        show("69");
+      }
+      if (score >= 10 ** 70) {
+        show("70");
+      }
+      if (score >= 10 ** 71) {
+        show("71");
+      }
+      if (score >= 10 ** 72) {
+        show("72");
+      }
+      if (score >= 10 ** 73) {
+        show("73");
+      }
+      if (score >= 10 ** 74) {
+        show("74");
+      }
+      if (score >= 10 ** 75) {
+        show("75");
+      }
+      if (score >= 10 ** 76) {
+        show("76");
+      }
+      if (score >= 10 ** 77) {
+        show("77");
+      }
+      if (score >= 10 ** 78) {
+        show("78");
+      }
+      if (score >= 10 ** 79) {
+        show("79");
+      }
+      if (score >= 10 ** 80) {
+        show("80");
+      }
+      if (score >= 10 ** 81) {
+        show("81");
+      }
+      if (score >= 10 ** 82) {
+        show("82");
+      }
+      if (score >= 10 ** 83) {
+        show("83");
+      }
+      if (score >= 10 ** 84) {
+        show("84");
+      }
+      if (score >= 10 ** 85) {
+        show("85");
+      }
+      if (score >= 10 ** 86) {
+        show("86");
+      }
+      if (score >= 10 ** 87) {
+        show("87");
+      }
+      if (score >= 10 ** 88) {
+        show("88");
+      }
+      if (score >= 10 ** 89) {
+        show("89");
+      }
+      if (score >= 10 ** 90) {
+        show("90");
+      }
+      if (score >= 10 ** 91) {
+        show("91");
+      }
+      if (score >= 10 ** 92) {
+        show("92");
+      }
+      if (score >= 10 ** 93) {
+        show("93");
+      }
+      if (score >= 10 ** 94) {
+        show("94");
+      }
+      if (score >= 10 ** 95) {
+        show("95");
+      }
+      if (score >= 10 ** 96) {
+        show("96");
+      }
+      if (score >= 10 ** 97) {
+        show("97");
+      }
+      if (score >= 10 ** 98) {
+        show("98");
+      }
+      if (score >= 10 ** 99) {
+        show("99");
+      }
+      if (score >= 10 ** 100) {
+        show("100");
+      }
+    }
+  </script>
+
+  <body>
+    <div class="bar">PlusPlus</div>
+    <center>
+      <h1 id="points"></h1>
+      <button id="0" onclick="score += scoreinc1;">+</button>
+      <button id="1" onclick="scoreinc1 += scoreinc2;">*</button>
+      <button id="2" onclick="scoreinc2 += scoreinc3;">^</button>
+      <button id="3" onclick="scoreinc3 += scoreinc4;">!</button>
+      <button id="4" onclick="scoreinc4 += scoreinc5;">ℤ</button>
+      <button id="5" onclick="scoreinc5 += scoreinc6;">∝</button>
+      <button id="6" onclick="scoreinc6 += scoreinc7;">≏</button>
+      <button id="7" onclick="scoreinc7 += scoreinc8;">≍</button>
+      <button id="8" onclick="scoreinc8 += scoreinc9;">∴</button>
+      <button id="9" onclick="scoreinc9 += scoreinc10;">∞</button>
+      <button id="10" onclick="scoreinc10 += scoreinc11;">*+</button>
+      <button id="11" onclick="scoreinc11 += scoreinc12;">**</button>
+      <button id="12" onclick="scoreinc12 += scoreinc13;">*^</button>
+      <button id="13" onclick="scoreinc13 += scoreinc14;">*!</button>
+      <button id="14" onclick="scoreinc14 += scoreinc15;">*ℤ</button>
+      <button id="15" onclick="scoreinc15 += scoreinc16;">*∝</button>
+      <button id="16" onclick="scoreinc16 += scoreinc17;">*≏</button>
+      <button id="17" onclick="scoreinc17 += scoreinc18;">*≍</button>
+      <button id="18" onclick="scoreinc18 += scoreinc19;">*∴</button>
+      <button id="19" onclick="scoreinc19 += scoreinc20;">*∞</button>
+      <button id="20" onclick="scoreinc20 += scoreinc21;">^+</button>
+      <button id="21" onclick="scoreinc21 += scoreinc22;">^*</button>
+      <button id="22" onclick="scoreinc22 += scoreinc23;">^^</button>
+      <button id="23" onclick="scoreinc23 += scoreinc24;">^!</button>
+      <button id="24" onclick="scoreinc24 += scoreinc25;">^ℤ</button>
+      <button id="25" onclick="scoreinc25 += scoreinc26;">^∝</button>
+      <button id="26" onclick="scoreinc26 += scoreinc27;">^≏</button>
+      <button id="27" onclick="scoreinc27 += scoreinc28;">^≍</button>
+      <button id="28" onclick="scoreinc28 += scoreinc29;">^∴</button>
+      <button id="29" onclick="scoreinc29 += scoreinc30;">^∞</button>
+      <button id="30" onclick="scoreinc30 += scoreinc31;">!+</button>
+      <button id="31" onclick="scoreinc31 += scoreinc32;">!*</button>
+      <button id="32" onclick="scoreinc32 += scoreinc33;">!^</button>
+      <button id="33" onclick="scoreinc33 += scoreinc34;">!!</button>
+      <button id="34" onclick="scoreinc34 += scoreinc35;">!ℤ</button>
+      <button id="35" onclick="scoreinc35 += scoreinc36;">!∝</button>
+      <button id="36" onclick="scoreinc36 += scoreinc37;">!≏</button>
+      <button id="37" onclick="scoreinc37 += scoreinc38;">!≍</button>
+      <button id="38" onclick="scoreinc38 += scoreinc39;">!∴</button>
+      <button id="39" onclick="scoreinc39 += scoreinc40;">!∞</button>
+      <button id="40" onclick="scoreinc40 += scoreinc41;">ℤ+</button>
+      <button id="41" onclick="scoreinc41 += scoreinc42;">ℤ*</button>
+      <button id="42" onclick="scoreinc42 += scoreinc43;">ℤ^</button>
+      <button id="43" onclick="scoreinc43 += scoreinc44;">ℤ!</button>
+      <button id="44" onclick="scoreinc44 += scoreinc45;">ℤℤ</button>
+      <button id="45" onclick="scoreinc45 += scoreinc46;">ℤ∝</button>
+      <button id="46" onclick="scoreinc46 += scoreinc47;">ℤ≏</button>
+      <button id="47" onclick="scoreinc47 += scoreinc48;">ℤ≍</button>
+      <button id="48" onclick="scoreinc48 += scoreinc49;">ℤ∴</button>
+      <button id="49" onclick="scoreinc49 += scoreinc50;">ℤ∞</button>
+      <button id="50" onclick="scoreinc50 += scoreinc51;">∝+</button>
+      <button id="51" onclick="scoreinc51 += scoreinc52;">∝*</button>
+      <button id="52" onclick="scoreinc52 += scoreinc53;">∝^</button>
+      <button id="53" onclick="scoreinc53 += scoreinc54;">∝!</button>
+      <button id="54" onclick="scoreinc54 += scoreinc55;">∝ℤ</button>
+      <button id="55" onclick="scoreinc55 += scoreinc56;">∝∝</button>
+      <button id="56" onclick="scoreinc56 += scoreinc57;">∝≏</button>
+      <button id="57" onclick="scoreinc57 += scoreinc58;">∝≍</button>
+      <button id="58" onclick="scoreinc58 += scoreinc59;">∝∴</button>
+      <button id="59" onclick="scoreinc59 += scoreinc60;">∝∞</button>
+      <button id="60" onclick="scoreinc60 += scoreinc61;">≏+</button>
+      <button id="61" onclick="scoreinc61 += scoreinc62;">≏*</button>
+      <button id="62" onclick="scoreinc62 += scoreinc63;">≏^</button>
+      <button id="63" onclick="scoreinc63 += scoreinc64;">≏!</button>
+      <button id="64" onclick="scoreinc64 += scoreinc65;">≏ℤ</button>
+      <button id="65" onclick="scoreinc65 += scoreinc66;">≏∝</button>
+      <button id="66" onclick="scoreinc66 += scoreinc67;">≏≏</button>
+      <button id="67" onclick="scoreinc67 += scoreinc68;">≏≍</button>
+      <button id="68" onclick="scoreinc68 += scoreinc69;">≏∴</button>
+      <button id="69" onclick="scoreinc69 += scoreinc70;">≏∞</button>
+      <button id="70" onclick="scoreinc70 += scoreinc71;">≍+</button>
+      <button id="71" onclick="scoreinc71 += scoreinc72;">≍*</button>
+      <button id="72" onclick="scoreinc72 += scoreinc73;">≍^</button>
+      <button id="73" onclick="scoreinc73 += scoreinc74;">≍!</button>
+      <button id="74" onclick="scoreinc74 += scoreinc75;">≍ℤ</button>
+      <button id="75" onclick="scoreinc75 += scoreinc76;">≍∝</button>
+      <button id="76" onclick="scoreinc76 += scoreinc77;">≍≏</button>
+      <button id="77" onclick="scoreinc77 += scoreinc78;">≍≍</button>
+      <button id="78" onclick="scoreinc78 += scoreinc79;">≍∴</button>
+      <button id="79" onclick="scoreinc79 += scoreinc80;">≍∞</button>
+      <button id="80" onclick="scoreinc80 += scoreinc81;">∴+</button>
+      <button id="81" onclick="scoreinc81 += scoreinc82;">∴*</button>
+      <button id="82" onclick="scoreinc82 += scoreinc83;">∴^</button>
+      <button id="83" onclick="scoreinc83 += scoreinc84;">∴!</button>
+      <button id="84" onclick="scoreinc84 += scoreinc85;">∴ℤ</button>
+      <button id="85" onclick="scoreinc85 += scoreinc86;">∴∝</button>
+      <button id="86" onclick="scoreinc86 += scoreinc87;">∴≏</button>
+      <button id="87" onclick="scoreinc87 += scoreinc88;">∴≍</button>
+      <button id="88" onclick="scoreinc88 += scoreinc89;">∴∴</button>
+      <button id="89" onclick="scoreinc89 += scoreinc90;">∴∞</button>
+      <button id="90" onclick="scoreinc90 += scoreinc91;">∞+</button>
+      <button id="91" onclick="scoreinc91 += scoreinc92;">∞*</button>
+      <button id="92" onclick="scoreinc92 += scoreinc93;">∞^</button>
+      <button id="93" onclick="scoreinc93 += scoreinc94;">∞!</button>
+      <button id="94" onclick="scoreinc94 += scoreinc95;">∞ℤ</button>
+      <button id="95" onclick="scoreinc95 += scoreinc96;">∞∝</button>
+      <button id="96" onclick="scoreinc96 += scoreinc97;">∞≏</button>
+      <button id="97" onclick="scoreinc97 += scoreinc98;">∞≍</button>
+      <button id="98" onclick="scoreinc98 += scoreinc99;">∞∴</button>
+      <button id="99" onclick="scoreinc99 += scoreinc100;">∞∞</button>
+      <button id="100" onclick="scoreinc100++">You Win!</button>
+    </center>
+  </body>
+</html>
